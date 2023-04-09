@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FH_2023_TECS</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">dAsKIKsrVFkfbSuu7hH3E9DcyUQv8HifPHnG74k7</string>
+    <string name="back4app_client_key">6SaJhhC5X1OaKOu9EU9cXSnJGH9gxwp0mtTle5gl</string>
+    <string name="login">LOGIN</string>
+    <string name="username">username</string>
+
 </resources>

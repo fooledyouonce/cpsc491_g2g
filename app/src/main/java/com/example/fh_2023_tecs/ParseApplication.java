@@ -2,21 +2,17 @@ package com.example.fh_2023_tecs;
 
 import android.app.Application;
 
+import com.parse.Parse;
+
+
 public class ParseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        //register parse models
-       //i.e.:  ParseObject.registerSubclass(Post.class);
-
-        // ParseObject.registerSubclass(Post.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("dAsKIKsrVFkfbSuu7hH3E9DcyUQv8HifPHnG74k7")
-                .clientKey("6SaJhhC5X1OaKOu9EU9cXSnJGH9gxwp0mtTle5gl")
-                .server("https://parseapi.back4app.com")
-                .build()
-        );
+                .applicationId(getString(R.string.back4app_app_id))
+                .clientKey(getString(R.string.back4app_client_key))
+                .server(getString(R.string.back4app_server_url))
+                .build());
     }
-
 }
