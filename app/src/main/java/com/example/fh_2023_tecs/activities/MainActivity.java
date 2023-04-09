@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        fragment = new PostsFragment();
+                        fragment = new HomeFragment();
                         break;
                     case R.id.action_wiki:
-                        fragment = new ComposeFragment();
+                        fragment = new WikiFragment();
                         break;
                     case R.id.action_profile:
                         fragment = new ProfileFragment(ParseUser.getCurrentUser());
