@@ -26,7 +26,6 @@
         <activity
             android:name=".activities.MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".activities.ScanActivity"
             android:exported="false" />

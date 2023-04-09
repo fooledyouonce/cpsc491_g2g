@@ -21,9 +21,9 @@ import com.example.fh_2023_tecs.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
-import fragments.HomeFragment;
-import fragments.ProfileFragment;
-import fragments.WikiFragment;
+import com.example.fh_2023_tecs.fragments.HomeFragment;
+import com.example.fh_2023_tecs.fragments.ProfileFragment;
+import com.example.fh_2023_tecs.fragments.WikiFragment;
 
 public class ManualActivity extends AppCompatActivity {
 

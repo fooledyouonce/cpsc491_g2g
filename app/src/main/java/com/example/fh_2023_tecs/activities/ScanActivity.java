@@ -25,14 +25,13 @@ import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
 import com.example.fh_2023_tecs.R;
+import com.example.fh_2023_tecs.fragments.HomeFragment;
+import com.example.fh_2023_tecs.fragments.ProfileFragment;
+import com.example.fh_2023_tecs.fragments.WikiFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
 import java.io.File;
-
-import fragments.HomeFragment;
-import fragments.ProfileFragment;
-import fragments.WikiFragment;
 
 public class ScanActivity extends AppCompatActivity {
     private static final String TAG = "ScanActivity";

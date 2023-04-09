@@ -1,4 +1,4 @@
-package fragments;
+package com.example.fh_2023_tecs.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
