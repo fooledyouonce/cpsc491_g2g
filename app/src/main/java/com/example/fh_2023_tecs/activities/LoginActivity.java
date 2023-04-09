@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void done(ParseException e) {
                         if (e == null) {
                             goMainActivity();
-                            Toast.makeText(LoginActivity.this, "Let's get the party started!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Toast.makeText(LoginActivity.this, "Please provide credentials!", Toast.LENGTH_SHORT).show();
