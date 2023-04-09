@@ -30,7 +30,6 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -52,14 +51,12 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-
     private void goScanActivity() {
-        Intent i = new Intent(getActivity(), ScanActivity.class);
+        Intent i = new Intent(getContext(), ScanActivity.class);
         startActivity(i);
     }
-
     private void goManualActivity() {
-        Intent i = new Intent(getActivity(), ManualActivity.class);
+        Intent i = new Intent(getContext(), ManualActivity.class);
         startActivity(i);
     }
 }

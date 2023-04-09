@@ -1,4 +1,6 @@
 package com.example.fh_2023_tecs.activities;
 
-public class ScanActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ScanActivity extends AppCompatActivity {
 }
