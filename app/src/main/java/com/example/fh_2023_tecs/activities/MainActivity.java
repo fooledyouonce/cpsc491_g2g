@@ -11,12 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.fh_2023_tecs.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.parse.ParseUser;
-
 import com.example.fh_2023_tecs.fragments.HomeFragment;
 import com.example.fh_2023_tecs.fragments.ProfileFragment;
 import com.example.fh_2023_tecs.fragments.WikiFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.parse.ParseUser;
 
 public class MainActivity extends AppCompatActivity {
 

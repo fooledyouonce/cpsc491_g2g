@@ -23,6 +23,7 @@
     <string name="wiki">Wiki</string>
     <string name="profile">Profile</string>
      <string name="paper">TextView</string>
+    <string name="waste_categories">Waste Categories</string>
 
 
 </resources>

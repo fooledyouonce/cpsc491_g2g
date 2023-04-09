@@ -1,26 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ptCategoties"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/description_input"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/tvWasteCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="This is the wiki page. It is under renovation."
-        android:inputType="text"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="650dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/waste_categories"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btnPaper"
+        android:layout_width="74dp"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="531dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageButton
+        android:id="@+id/btnPlastic"
+        android:layout_width="108dp"
+        android:layout_height="147dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="162dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/waterbottle" />
+
+    <ImageButton
+        android:id="@+id/btnMetal"
+        android:layout_width="76dp"
+        android:layout_height="78dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="528dp"
+        android:background="@drawable/soda_can"
+        android:cropToPadding="false"
+        android:scaleX="1"
+        android:scaleY="1" />
 
 </RelativeLayout>

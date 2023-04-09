@@ -33,8 +33,6 @@ import com.example.fh_2023_tecs.fragments.WikiFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
-import org.parceler.Parcels;
-
 import java.io.File;
 
 public class ScanActivity extends AppCompatActivity {
