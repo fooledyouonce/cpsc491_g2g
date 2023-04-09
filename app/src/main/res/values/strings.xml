@@ -9,5 +9,8 @@
     <string name="login">LOGIN</string>
     <string name="username">username</string>
     <string name="sign_up">SIGN UP</string>
+    <string name="welcome">Welcome</string>
+    <string name="scan_item">SCAN ITEM</string>
+    <string name="input_manually">INPUT MANUALLY</string>
 
 </resources>
