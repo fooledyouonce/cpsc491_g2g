@@ -114,7 +114,7 @@ public class ScanActivity extends AppCompatActivity {
 
     private void goResultActivity() {
         Intent i = new Intent(this, ResultActivity.class);
-        i.putExtra("material", Parcels.wrap(material));
+        //i.putExtra("material", Parcels.wrap(material));
         startActivity(i);
         finish();
     }

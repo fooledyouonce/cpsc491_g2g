@@ -19,11 +19,16 @@ import androidx.fragment.app.Fragment;
 
 import com.example.fh_2023_tecs.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 import com.example.fh_2023_tecs.fragments.HomeFragment;
 import com.example.fh_2023_tecs.fragments.ProfileFragment;
 import com.example.fh_2023_tecs.fragments.WikiFragment;
+import com.parse.SaveCallback;
+
+import java.util.Arrays;
 
 public class ManualActivity extends AppCompatActivity {
 
@@ -84,11 +89,25 @@ public class ManualActivity extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(ManualActivity.this, "Checking!", LENGTH_SHORT).show();
-                    etItemName.setText("");
-                    etItemType.setText("");
 
                     //TODO: DB checking here
+                    // Configure Query
+                    ParseObject userManualForm = new ParseObject("UserManualForm");
+                    // Store an object
+                    userManualForm.put("itemName", etItemName.getText().toString());
+                    userManualForm.put("itemType", etItemType.getText().toString());
 
+                    // Saving object
+                    userManualForm.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                // Success
+                            } else {
+                                // Error
+                            }
+                        }
+                    });
                     //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
                     goResultActivity();
                 }
@@ -123,3 +142,4 @@ public class ManualActivity extends AppCompatActivity {
         finish();
     }
 }
+
