@@ -3,43 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_blue">
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="100dp"
+        android:layout_toStartOf="@+id/btnSubmit"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:srcCompat="@drawable/baseline_add_a_photo_24" />
+
+    <ImageButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:srcCompat="@drawable/baseline_check_circle_24" />
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCapture"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
-        android:text="Take a Pic" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="200dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/btnSubmit"
+    <TextView
+        android:id="@+id/tvPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivItem"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:text="Check" />
-
-    <ImageView
-        android:id="@+id/ivItem"
-        android:layout_width="236dp"
-        android:layout_height="437dp"
-        android:layout_below="@+id/btnCapture"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="50dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textAlignment="center"
+        tools:text="Capture image" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -56,5 +77,4 @@
         android:layout_height="match_parent">
 
     </FrameLayout>
-
 </RelativeLayout>

@@ -2,45 +2,65 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="84dp"
-        android:layout_height="26dp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="331dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="150dp"
-        android:text="@string/welcome"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-70dp"
+        android:layout_marginEnd="80dp"
+        app:srcCompat="@drawable/logo_color_removebg" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="75dp"
+        android:fontFamily="@font/poppins_medium"
         android:textAlignment="center"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        tools:text="@string/hf_filler" />
 
     <Button
         android:id="@+id/btnScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvWelcome"
+        android:layout_above="@+id/btnManual"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="84dp"
         android:layout_marginEnd="100dp"
-        android:text="@string/scan_item" />
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/logo_blue"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/scan_item"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnManual"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnScan"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="63dp"
         android:layout_marginEnd="100dp"
-        android:text="@string/input_manually" />
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/logo_blue"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/input_manually"
+        android:textColor="@color/white" />
 </RelativeLayout>

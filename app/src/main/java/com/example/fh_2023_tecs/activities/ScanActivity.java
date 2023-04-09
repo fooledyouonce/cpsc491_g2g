@@ -2,6 +2,7 @@ package com.example.fh_2023_tecs.activities;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,8 +14,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,9 +39,10 @@ public class ScanActivity extends AppCompatActivity {
     private static final String TAG = "ScanActivity";
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 396;
     private BottomNavigationView bottomNavigationView;
-    Button btnCapture;
-    Button btnSubmit;
+    ImageButton btnCapture;
+    ImageButton btnSubmit;
     ImageView ivItem;
+    TextView tvPrompt;
     private File photoFile;
     public String photoFileName = "item.jpg";
     @Override
@@ -54,6 +57,9 @@ public class ScanActivity extends AppCompatActivity {
         btnCapture = findViewById(R.id.btnCapture);
         btnSubmit = findViewById(R.id.btnSubmit);
         ivItem = findViewById(R.id.ivItem);
+        tvPrompt = findViewById(R.id.tvPrompt);
+
+        tvPrompt.setText("Take a picture of the material you wish to recycle.");
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -81,16 +87,18 @@ public class ScanActivity extends AppCompatActivity {
             }
         });
         btnCapture.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 launchCamera();
+                tvPrompt.setText("Ensure the picture is clear with good lighting before submitting!");
             }
         });
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(ivItem.getDrawable() == null) {
-                    Toast.makeText(ScanActivity.this, "Take a picture!", LENGTH_SHORT).show();
+                    Toast.makeText(ScanActivity.this, "Please take a picture!", LENGTH_SHORT).show();
                 } else {
                     //TODO: DB checking
                     Toast.makeText(ScanActivity.this, "Checking!", LENGTH_SHORT).show();

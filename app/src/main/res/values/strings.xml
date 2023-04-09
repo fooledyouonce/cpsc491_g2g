@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">RecycleRecognition</string>
 
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
@@ -9,8 +10,17 @@
     <string name="login">LOGIN</string>
     <string name="username">username</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="welcome">Welcome</string>
-    <string name="scan_item">SCAN ITEM</string>
-    <string name="input_manually">INPUT MANUALLY</string>
+    <string name="hf_filler">Recycling is fun!</string>
+    <string name="scan_item">SNAP</string>
+    <string name="input_manually">MANUAL INPUT</string>
+    <string name="check">CHECK</string>
+    <string name="check_to_see_if_your_item_can_be_recycled">Check to see if this material can be recycled!</string>
+    <string name="item_name_i_e_water_bottle">material name (i.e water bottle)</string>
+    <string name="what_item_is_made_of_i_e_plastic">what material is made of (i.e. plastic)</string>
+    <string name="password">password</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="wiki">Wiki</string>
+    <string name="profile">Profile</string>
 
 </resources>

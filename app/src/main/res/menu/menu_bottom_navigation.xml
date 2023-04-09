@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/baseline_home_24"
-        app:showAsAction="always" />
+        android:enabled="true"
+        android:icon="@drawable/outline_home_24"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="@string/home"
+        tools:ignore="AlwaysShowAction" />
     <item
         android:id="@+id/action_wiki"
-        android:icon="@drawable/baseline_question_mark_24"
-        app:showAsAction="always" />
+        android:enabled="true"
+        android:icon="@drawable/outline_info_24"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="@string/wiki" />
     <item
         android:id="@+id/action_profile"
-        android:icon="@drawable/baseline_person_24"
-        app:showAsAction="always" />
+        android:enabled="true"
+        android:icon="@drawable/outline_person_outline_24"
+        android:visible="true"
+        app:showAsAction="always"
+        android:title="@string/profile" />
+
 </menu>
