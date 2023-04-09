@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -23,7 +22,7 @@ public class ManualActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual);
 
@@ -40,22 +39,23 @@ public class ManualActivity extends AppCompatActivity {
                     case R.id.action_home:
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.flContainer, new HomeFragment()).commit();
+                        finish();
                         return true;
                     case R.id.action_wiki:
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.flContainer, new WikiFragment()).commit();
+                        finish();
                         return true;
                     case R.id.action_profile:
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.flContainer, new ProfileFragment(ParseUser.getCurrentUser())).commit();
+                        finish();
                         return true;
                     default:
                         return false;
                 }
             }
         });
-
-        bottomNavigationView.setSelectedItemId(R.id.action_home);
     }
 
     @Override

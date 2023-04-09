@@ -52,11 +52,11 @@ public class HomeFragment extends Fragment {
         });
     }
     private void goScanActivity() {
-        Intent i = new Intent(getContext(), ScanActivity.class);
+        Intent i = new Intent(getActivity(), ScanActivity.class);
         startActivity(i);
     }
     private void goManualActivity() {
-        Intent i = new Intent(getContext(), ManualActivity.class);
+        Intent i = new Intent(getActivity(), ManualActivity.class);
         startActivity(i);
     }
 }
