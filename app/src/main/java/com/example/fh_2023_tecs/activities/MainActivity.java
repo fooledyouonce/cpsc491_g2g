@@ -5,12 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.fh_2023_tecs.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
+
+import fragments.HomeFragment;
+import fragments.ProfileFragment;
+import fragments.WikiFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,30 +32,30 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
 
-        //needs work
-        /*bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @SuppressLint("NonConstantResourceId")
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        fragment = new HomeFragment();
-                        break;
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.flContainer, new HomeFragment()).commit();
+                        return true;
                     case R.id.action_wiki:
-                        fragment = new WikiFragment();
-                        break;
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.flContainer, new WikiFragment()).commit();
+                        return true;
                     case R.id.action_profile:
-                        fragment = new ProfileFragment(ParseUser.getCurrentUser());
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.flContainer, new ProfileFragment(ParseUser.getCurrentUser())).commit();
+                        return true;
                     default:
-                        break;
+                        return false;
                 }
-                fragmentManager.beginTransaction().replace(R.id.flContainer, Objects.requireNonNull(fragment)).commit();
-                return true;
             }
         });
+
         bottomNavigationView.setSelectedItemId(R.id.action_home);
-    }*/
     }
 
     @Override
@@ -57,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.logout, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.Logout) {
@@ -67,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     private void goLoginActivity() {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
