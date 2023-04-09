@@ -26,6 +26,10 @@
         <activity
             android:name=".activities.ManualActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".activities.ResultActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true">

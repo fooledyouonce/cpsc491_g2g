@@ -1,9 +1,15 @@
 package com.example.fh_2023_tecs.activities;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -21,6 +27,11 @@ import fragments.WikiFragment;
 public class ManualActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+
+    EditText etItemName;
+    EditText etItemType;
+    Button btnCheck;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +41,9 @@ public class ManualActivity extends AppCompatActivity {
         actionBar = getSupportActionBar();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        etItemName = findViewById(R.id.etItemName);
+        etItemType = findViewById(R.id.etItemType);
+        btnCheck = findViewById(R.id.btnCheck);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -54,6 +68,21 @@ public class ManualActivity extends AppCompatActivity {
                     default:
                         return false;
                 }
+            }
+        });
+
+        String itemName = etItemName.getText().toString();
+        String itemType = etItemType.getText().toString();
+        btnCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManualActivity.this, "Checking!", LENGTH_SHORT).show();
+                //TODO: DB checking here
+
+                //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
+
+                etItemName.setText("");
+                etItemType.setText("");
             }
         });
     }
