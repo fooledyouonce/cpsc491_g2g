@@ -14,7 +14,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="What Can Be Recycled:\n\n white office paper, newspaper, colored office paper, cardboard, white computer paper, magazines, catalogs, and phone books.\n\n\nWhat Can't Be Recycled:\n\n paper with food waste, juice and cereal boxes, paper cups, paper towels, and paper or magazine laminated with plastic."
+        android:text="What Can Be Recycled:\n\nPETE [1] (soda bottles, water bottles, food packaging), HDPE [2] (Milk jugs, cosmetics, shampoo), LDPE [4] (squeezable bottles, shopping bags, bread bags)\n\n\nDifficult or Can't Be Recycled:\n\n PS [6] (egg cartons, meat trays, disposable plates, to-go containers), Other PP [7] (bottle caps, buckets, plastic furniture) , PVC [3] (cleaning products pipes, some toys)"
         android:textAlignment="center" />
 
 </LinearLayout>

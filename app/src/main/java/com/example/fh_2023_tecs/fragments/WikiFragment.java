@@ -19,7 +19,6 @@ public class WikiFragment extends Fragment {
         // Required empty public constructor
     }
     ImageButton btnPaper;
-    ImageButton btnCardboard;
     ImageButton btnPlastic;
     ImageButton btnGlass;
     ImageButton btnMetal;
@@ -35,12 +34,55 @@ public class WikiFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         btnPaper = view.findViewById(R.id.btnPaper);
+        btnPlastic = view.findViewById(R.id.btnPlastic);
+        btnGlass = view.findViewById(R.id.btnGlass);
+        btnMetal = view.findViewById(R.id.btnMetal);
         btnPaper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showPaperDialog();
             }
         });
+
+        btnPlastic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPlasticDialog();
+            }
+        });
+
+        btnGlass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showGlassDialog();
+            }
+        });
+
+        btnMetal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMetalDialog();
+            }
+        });
+
+    }
+
+    private void showMetalDialog() {
+        FragmentManager fm = getFragmentManager();
+        FragmentMetal fragmentMetal = FragmentMetal.newInstance("Some Title");
+        fragmentMetal.show(fm, "fragment_metal");
+    }
+
+    private void showGlassDialog() {
+        FragmentManager fm = getFragmentManager();
+        FragmentGlass fragmentGlass = FragmentGlass.newInstance("Some Title");
+        fragmentGlass.show(fm, "fragment_glass");
+    }
+
+    private void showPlasticDialog() {
+        FragmentManager fm = getFragmentManager();
+        FragmentPlastic fragmentPlastic = FragmentPlastic.newInstance("Some Title");
+        fragmentPlastic.show(fm, "fragment_plastic");
     }
 
     private void showPaperDialog() {

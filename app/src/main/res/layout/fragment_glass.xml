@@ -14,7 +14,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="What Can Be Recycled:\n\n white office paper, newspaper, colored office paper, cardboard, white computer paper, magazines, catalogs, and phone books.\n\n\nWhat Can't Be Recycled:\n\n paper with food waste, juice and cereal boxes, paper cups, paper towels, and paper or magazine laminated with plastic."
+        android:text="What Can Be Recycled:\n\n Glass sold with food as packaging and mason jars\n\n\nWhat Can't Be Recycled:\n\n Window panes, mirrors, lightbulbs, automotive glass, crystal, ceramics, glass that is heat resistant"
         android:textAlignment="center" />
 
 </LinearLayout>
