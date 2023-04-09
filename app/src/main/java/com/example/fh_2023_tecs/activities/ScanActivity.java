@@ -1,5 +1,7 @@
 package com.example.fh_2023_tecs.activities;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,6 +39,7 @@ public class ScanActivity extends AppCompatActivity {
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 396;
     private BottomNavigationView bottomNavigationView;
     Button btnCapture;
+    Button btnSubmit;
     ImageView ivItem;
     private File photoFile;
     public String photoFileName = "item.jpg";
@@ -50,6 +53,7 @@ public class ScanActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         btnCapture = findViewById(R.id.btnCapture);
+        btnSubmit = findViewById(R.id.btnSubmit);
         ivItem = findViewById(R.id.ivItem);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -77,15 +81,33 @@ public class ScanActivity extends AppCompatActivity {
                 }
             }
         });
-
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 launchCamera();
             }
         });
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ivItem.getDrawable() == null) {
+                    Toast.makeText(ScanActivity.this, "Take a picture!", LENGTH_SHORT).show();
+                } else {
+                    //TODO: DB checking
+                    Toast.makeText(ScanActivity.this, "Checking!", LENGTH_SHORT).show();
+
+                    //TODO: Upon success, go to result
+                    goResultActivity();
+                }
+            }
+        });
     }
 
+    private void goResultActivity() {
+        Intent i = new Intent(this, ResultActivity.class);
+        startActivity(i);
+        finish();
+    }
     private void launchCamera() {
         //create Intent to take a picture and return control to the calling application
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -106,7 +128,6 @@ public class ScanActivity extends AppCompatActivity {
             startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
         }
     }
-
     @SuppressWarnings("deprecation")
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -123,7 +144,6 @@ public class ScanActivity extends AppCompatActivity {
             }
         }
     }
-
     private File getPhotoFileUri(String photoFileName) {
         //get safe storage directory for photos
         //use `getExternalFilesDir` on Context to access package-specific directories.
@@ -135,8 +155,6 @@ public class ScanActivity extends AppCompatActivity {
         //return the file target for the photo based on filename
         return new File(mediaStorageDir.getPath() + File.separator + photoFileName);
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.logout, menu);

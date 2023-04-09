@@ -4,6 +4,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,15 +77,29 @@ public class ManualActivity extends AppCompatActivity {
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ManualActivity.this, "Checking!", LENGTH_SHORT).show();
-                //TODO: DB checking here
 
-                //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
+                //TODO: fix &&
+                if(TextUtils.isEmpty(etItemName.getText().toString()) && TextUtils.isEmpty(etItemType.getText().toString())) {
+                    Toast.makeText(ManualActivity.this, "Please fill out all fields!", LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(ManualActivity.this, "Checking!", LENGTH_SHORT).show();
+                    etItemName.setText("");
+                    etItemType.setText("");
 
-                etItemName.setText("");
-                etItemType.setText("");
+                    //TODO: DB checking here
+
+                    //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
+                    goResultActivity();
+                }
             }
         });
+    }
+
+    private void goResultActivity() {
+        Intent i = new Intent(this, ResultActivity.class);
+        startActivity(i);
+        finish();
     }
 
     @Override

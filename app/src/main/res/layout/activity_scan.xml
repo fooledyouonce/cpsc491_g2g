@@ -13,22 +13,32 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="100dp"
         android:text="Take a Pic" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivItem"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="150dp"
+        android:text="Check" />
 
     <ImageView
         android:id="@+id/ivItem"
         android:layout_width="236dp"
         android:layout_height="437dp"
-        android:layout_above="@+id/bottomNavigation"
         android:layout_below="@+id/btnCapture"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="40dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
