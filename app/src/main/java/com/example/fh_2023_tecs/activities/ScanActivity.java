@@ -33,6 +33,8 @@ import com.example.fh_2023_tecs.fragments.WikiFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
+import org.parceler.Parcels;
+
 import java.io.File;
 
 public class ScanActivity extends AppCompatActivity {
@@ -112,6 +114,7 @@ public class ScanActivity extends AppCompatActivity {
 
     private void goResultActivity() {
         Intent i = new Intent(this, ResultActivity.class);
+        i.putExtra("material", Parcels.wrap(material));
         startActivity(i);
         finish();
     }

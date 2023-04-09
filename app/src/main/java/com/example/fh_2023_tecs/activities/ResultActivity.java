@@ -9,6 +9,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fh_2023_tecs.R;
+import com.example.fh_2023_tecs.models.Material;
+
+import org.parceler.Parcels;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -16,6 +19,7 @@ public class ResultActivity extends AppCompatActivity {
     TextView tvRecycle;
     TextView tvWhere;
     ImageButton btnReturn;
+    private Material material;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +30,8 @@ public class ResultActivity extends AppCompatActivity {
         tvRecycle = findViewById(R.id.tvRecycle);
         tvWhere = findViewById(R.id.tvWhere);
         btnReturn = findViewById(R.id.btnReturn);
+
+        material = Parcels.unwrap(getIntent().getParcelableExtra("material"));
 
         tvItem.setText("Test");
         tvRecycle.setText("Test");
