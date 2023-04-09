@@ -8,5 +8,6 @@
     <string name="back4app_client_key">6SaJhhC5X1OaKOu9EU9cXSnJGH9gxwp0mtTle5gl</string>
     <string name="login">LOGIN</string>
     <string name="username">username</string>
+    <string name="sign_up">SIGN UP</string>
 
 </resources>

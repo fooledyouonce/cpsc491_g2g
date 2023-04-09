@@ -11,13 +11,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fh_2023_tecs.R;
+import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class LoginActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    private Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSignUp = findViewById(R.id.btnSignUp);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +41,29 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 loginUser(username, password);
+            }
+        });
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "onClick signup button");
+                ParseUser user = new ParseUser();
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+                user.setUsername(username);
+                user.setPassword(password);
+                user.signUpInBackground(new SignUpCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            goMainActivity();
+                            Toast.makeText(LoginActivity.this, "Let's get the party started!", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(LoginActivity.this, "Please provide credentials!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
     }

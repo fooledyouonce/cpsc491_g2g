@@ -56,4 +56,17 @@
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="-123dp"
+        android:layout_marginEnd="80dp"
+        android:accessibilityLiveRegion="none"
+        android:text="@string/sign_up" />
 </RelativeLayout>
