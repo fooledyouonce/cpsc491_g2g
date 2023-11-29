@@ -16,7 +16,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="-70dp"
         android:layout_marginEnd="80dp"
-        app:srcCompat="@drawable/fullygreen" />
+        app:srcCompat="@drawable/g2gw" />
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -38,19 +38,19 @@
         android:id="@+id/btnScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnManual"
+        android:layout_above="@+id/overall_rate"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="50dp"
-        android:backgroundTint="@color/logo_blue"
+        android:backgroundTint="@color/Pink"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/scan_item"
         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/btnManual"
+    <RatingBar
+        android:id="@+id/overall_rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -61,6 +61,9 @@
         android:layout_marginBottom="150dp"
         android:backgroundTint="@color/logo_blue"
         android:fontFamily="@font/poppins_medium"
+        android:numStars="5"
+        android:rating="4"
+        android:stepSize=".5"
         android:text="@string/input_manually"
         android:textColor="@color/white" />
 </RelativeLayout>

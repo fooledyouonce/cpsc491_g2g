@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Fully Green</string>
+    <string name="app_name">Got2Go</string>
 
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
 
@@ -10,8 +10,8 @@
     <string name="login">LOGIN</string>
     <string name="username">username</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="hf_filler">Recycling is fun!</string>
-    <string name="scan_item">SNAP</string>
+    <string name="hf_filler">Write a Review for Location</string>
+    <string name="scan_item">Submit</string>
     <string name="input_manually">MANUAL INPUT</string>
     <string name="check">CHECK</string>
     <string name="check_to_see_if_your_item_can_be_recycled">Check to see if this material can be recycled!</string>
