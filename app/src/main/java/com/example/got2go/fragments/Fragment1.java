@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.fragments;
+package com.example.got2go.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,13 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.fh_2023_tecs.R;
+import com.example.got2go.R;
 
-public class FragmentPlastic extends DialogFragment {
-
-    public FragmentPlastic() {}
-    public static FragmentPlastic newInstance(String title) {
-        FragmentPlastic frag = new FragmentPlastic();
+public class Fragment1 extends DialogFragment {
+    //TODO: update fragment w/g2g stuff
+    public Fragment1() {}
+    public static Fragment1 newInstance(String title) {
+        Fragment1 frag = new Fragment1();
         Bundle args = new Bundle();
         args.putString("title", title);
         frag.setArguments(args);
@@ -24,7 +24,7 @@ public class FragmentPlastic extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_plastic, container);
+        return inflater.inflate(R.layout.fragment_glass, container);
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

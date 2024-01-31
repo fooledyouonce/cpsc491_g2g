@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs;
+package com.example.got2go;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

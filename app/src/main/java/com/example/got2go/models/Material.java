@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.models;
+package com.example.got2go.models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseObject;

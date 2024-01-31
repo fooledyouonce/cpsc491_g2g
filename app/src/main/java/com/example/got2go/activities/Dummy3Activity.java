@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.activities;
+package com.example.got2go.activities;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -26,16 +26,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
-import com.example.fh_2023_tecs.R;
-import com.example.fh_2023_tecs.fragments.HomeFragment;
-import com.example.fh_2023_tecs.fragments.ProfileFragment;
-import com.example.fh_2023_tecs.fragments.WikiFragment;
+import com.example.got2go.R;
+import com.example.got2go.fragments.HomeFragment;
+import com.example.got2go.fragments.ProfileFragment;
+import com.example.got2go.fragments.WikiFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
 import java.io.File;
 
-public class ScanActivity extends AppCompatActivity {
+public class Dummy3Activity extends AppCompatActivity {
+    //TODO: update fragment w/g2g stuff
     private static final String TAG = "ScanActivity";
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 396;
     private BottomNavigationView bottomNavigationView;
@@ -98,10 +99,10 @@ public class ScanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ivItem.getDrawable() == null) {
-                    Toast.makeText(ScanActivity.this, "Please take a picture!", LENGTH_SHORT).show();
+                    Toast.makeText(Dummy3Activity.this, "Please take a picture!", LENGTH_SHORT).show();
                 } else {
                     //TODO: DB checking
-                    Toast.makeText(ScanActivity.this, "Checking!", LENGTH_SHORT).show();
+                    Toast.makeText(Dummy3Activity.this, "Checking!", LENGTH_SHORT).show();
 
                     //TODO: Upon success, go to result
                     goResultActivity();
@@ -111,7 +112,7 @@ public class ScanActivity extends AppCompatActivity {
     }
 
     private void goResultActivity() {
-        Intent i = new Intent(this, ResultActivity.class);
+        Intent i = new Intent(this, Dummy2Activity.class);
         //i.putExtra("material", Parcels.wrap(material));
         startActivity(i);
         finish();

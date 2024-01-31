@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.fragments;
+package com.example.got2go.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.fh_2023_tecs.R;
+import com.example.got2go.R;
 
 public class WikiFragment extends Fragment {
-
+    //TODO: update fragment w/g2g stuff
     public WikiFragment() {
         // Required empty public constructor
     }
@@ -69,25 +69,25 @@ public class WikiFragment extends Fragment {
 
     private void showMetalDialog() {
         FragmentManager fm = getFragmentManager();
-        FragmentMetal fragmentMetal = FragmentMetal.newInstance("Some Title");
+        Fragment2 fragmentMetal = Fragment2.newInstance("Some Title");
         fragmentMetal.show(fm, "fragment_metal");
     }
 
     private void showGlassDialog() {
         FragmentManager fm = getFragmentManager();
-        FragmentGlass fragmentGlass = FragmentGlass.newInstance("Some Title");
+        Fragment1 fragmentGlass = Fragment1.newInstance("Some Title");
         fragmentGlass.show(fm, "fragment_glass");
     }
 
     private void showPlasticDialog() {
         FragmentManager fm = getFragmentManager();
-        FragmentPlastic fragmentPlastic = FragmentPlastic.newInstance("Some Title");
+        Fragment4 fragmentPlastic = Fragment4.newInstance("Some Title");
         fragmentPlastic.show(fm, "fragment_plastic");
     }
 
     private void showPaperDialog() {
         FragmentManager fm = getFragmentManager();
-        FragmentPaper fragmentPaper = FragmentPaper.newInstance("Some Title");
+        Fragment3 fragmentPaper = Fragment3.newInstance("Some Title");
         fragmentPaper.show(fm, "fragment_paper");
     }
 }

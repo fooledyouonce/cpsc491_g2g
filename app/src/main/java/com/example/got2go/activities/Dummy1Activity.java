@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.activities;
+package com.example.got2go.activities;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -17,21 +17,19 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.fh_2023_tecs.R;
+import com.example.got2go.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-import com.example.fh_2023_tecs.fragments.HomeFragment;
-import com.example.fh_2023_tecs.fragments.ProfileFragment;
-import com.example.fh_2023_tecs.fragments.WikiFragment;
+import com.example.got2go.fragments.HomeFragment;
+import com.example.got2go.fragments.ProfileFragment;
+import com.example.got2go.fragments.WikiFragment;
 import com.parse.SaveCallback;
 
-import java.util.Arrays;
-
-public class ManualActivity extends AppCompatActivity {
-
+public class Dummy1Activity extends AppCompatActivity {
+    //TODO: update activity w/g2g stuff
     private BottomNavigationView bottomNavigationView;
 
     EditText etItemName;
@@ -85,10 +83,10 @@ public class ManualActivity extends AppCompatActivity {
 
                 //TODO: fix &&
                 if(TextUtils.isEmpty(etItemName.getText().toString()) && TextUtils.isEmpty(etItemType.getText().toString())) {
-                    Toast.makeText(ManualActivity.this, "Please fill out all fields!", LENGTH_SHORT).show();
+                    Toast.makeText(Dummy1Activity.this, "Please fill out all fields!", LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(ManualActivity.this, "Checking!", LENGTH_SHORT).show();
+                    Toast.makeText(Dummy1Activity.this, "Checking!", LENGTH_SHORT).show();
 
                     //TODO: DB checking here
                     // Configure Query
@@ -116,7 +114,7 @@ public class ManualActivity extends AppCompatActivity {
     }
 
     private void goResultActivity() {
-        Intent i = new Intent(this, ResultActivity.class);
+        Intent i = new Intent(this, Dummy2Activity.class);
         startActivity(i);
         finish();
     }

@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.fragments;
+package com.example.got2go.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,15 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.fh_2023_tecs.R;
-import com.example.fh_2023_tecs.activities.ManualActivity;
-import com.example.fh_2023_tecs.activities.ScanActivity;
-
-import java.util.ArrayList;
-import java.util.Random;
+import com.example.got2go.R;
+import com.example.got2go.activities.Dummy1Activity;
+import com.example.got2go.activities.Dummy3Activity;
 
 public class HomeFragment extends Fragment {
-
+    //TODO: update fragment w/g2g stuff
     Button btnScan;
     RatingBar overall_rate;
     TextView tvWelcome;
@@ -53,11 +50,11 @@ public class HomeFragment extends Fragment {
 
     }
     private void goScanActivity() {
-        Intent i = new Intent(getActivity(), ScanActivity.class);
+        Intent i = new Intent(getActivity(), Dummy3Activity.class);
         startActivity(i);
     }
     private void goManualActivity() {
-        Intent i = new Intent(getActivity(), ManualActivity.class);
+        Intent i = new Intent(getActivity(), Dummy1Activity.class);
         startActivity(i);
     }
 }

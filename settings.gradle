@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "FH_2023_TECS"
+rootProject.name = "Got2Go"
 include ':app'

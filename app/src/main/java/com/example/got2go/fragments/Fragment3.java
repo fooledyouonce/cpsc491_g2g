@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.fragments;
+package com.example.got2go.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,13 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.fh_2023_tecs.R;
+import com.example.got2go.R;
 
-public class FragmentMetal extends DialogFragment {
-
-    public FragmentMetal() {}
-    public static FragmentMetal newInstance(String title) {
-        FragmentMetal frag = new FragmentMetal();
+public class Fragment3 extends DialogFragment {
+    //TODO: update fragment w/g2g stuff
+    public Fragment3() {}
+    public static Fragment3 newInstance(String title) {
+        Fragment3 frag = new Fragment3();
         Bundle args = new Bundle();
         args.putString("title", title);
         frag.setArguments(args);
@@ -24,7 +24,7 @@ public class FragmentMetal extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_metal, container);
+        return inflater.inflate(R.layout.fragment_paper, container);
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

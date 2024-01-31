@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.activities;
+package com.example.got2go.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fh_2023_tecs.R;
-import com.example.fh_2023_tecs.models.Material;
+import com.example.got2go.R;
+import com.example.got2go.models.Material;
 
 import org.parceler.Parcels;
 
-public class ResultActivity extends AppCompatActivity {
-
+public class Dummy2Activity extends AppCompatActivity {
+    //TODO: update activity w/g2g stuff
     TextView tvItem;
     TextView tvRecycle;
     TextView tvWhere;
@@ -41,7 +41,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void goMainActivity() {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
         finish(); //makes main activity the "default" page, closes login activity for access
     }

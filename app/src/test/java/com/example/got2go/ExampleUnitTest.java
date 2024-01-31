@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs;
+package com.example.got2go;
 
 import org.junit.Test;
 

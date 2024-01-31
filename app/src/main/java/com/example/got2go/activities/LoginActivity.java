@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.activities;
+package com.example.got2go.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fh_2023_tecs.R;
+import com.example.got2go.R;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goMainActivity() {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, HomeActivity.class);
         startActivity(i);
         finish(); //makes main activity the "default" page, closes login activity for access
     }

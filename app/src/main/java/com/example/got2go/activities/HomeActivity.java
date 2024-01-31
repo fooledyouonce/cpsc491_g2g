@@ -1,4 +1,4 @@
-package com.example.fh_2023_tecs.activities;
+package com.example.got2go.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,21 +10,21 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.fh_2023_tecs.R;
-import com.example.fh_2023_tecs.fragments.HomeFragment;
-import com.example.fh_2023_tecs.fragments.ProfileFragment;
-import com.example.fh_2023_tecs.fragments.WikiFragment;
+import com.example.got2go.R;
+import com.example.got2go.fragments.HomeFragment;
+import com.example.got2go.fragments.ProfileFragment;
+import com.example.got2go.fragments.WikiFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.ParseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         ActionBar actionBar;
         actionBar = getSupportActionBar();

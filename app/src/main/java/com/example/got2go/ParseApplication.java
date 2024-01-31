@@ -1,9 +1,9 @@
-package com.example.fh_2023_tecs;
+package com.example.got2go;
 
 import android.app.Application;
 
 import com.parse.Parse;
-
+//TODO (Emily): Connect new DB
 
 public class ParseApplication extends Application {
     @Override
