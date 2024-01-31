@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.fh_2023_tecs", appContext.getPackageName());
+        assertEquals("com.example.got2go", appContext.getPackageName());
     }
 }
