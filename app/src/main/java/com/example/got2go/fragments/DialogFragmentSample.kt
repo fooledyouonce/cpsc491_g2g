@@ -8,11 +8,11 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import com.example.got2go.R
 
-class Fragment3  //TODO: update fragment w/g2g stuff
+class DialogFragmentSample  //TODO: update fragment w/g2g stuff
     : DialogFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_paper, container)
+        return inflater.inflate(R.layout.fragment_sample, container)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,8 +27,8 @@ class Fragment3  //TODO: update fragment w/g2g stuff
     }
 
     companion object {
-        fun newInstance(title: String?): Fragment3 {
-            val frag = Fragment3()
+        fun newInstance(title: String?): DialogFragmentSample {
+            val frag = DialogFragmentSample()
             val args = Bundle()
             args.putString("title", title)
             frag.arguments = args

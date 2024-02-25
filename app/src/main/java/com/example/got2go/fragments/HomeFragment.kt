@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RatingBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.got2go.R
-import com.example.got2go.activities.Dummy1Activity
-import com.example.got2go.activities.Dummy3Activity
 
 class HomeFragment : Fragment() {
     //TODO: update fragment w/g2g stuff
@@ -28,16 +27,8 @@ class HomeFragment : Fragment() {
         var overall_rate: RatingBar = view.findViewById(R.id.overall_rate)
         var tvWelcome: TextView = view.findViewById(R.id.tvWelcome)
         tvWelcome.text = "Write a Review for Location"
-        btnScan.setOnClickListener(View.OnClickListener { goScanActivity() })
+        btnScan.setOnClickListener(View.OnClickListener { Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show() })
     }
 
-    private fun goScanActivity() {
-        val i = Intent(activity, Dummy3Activity::class.java)
-        startActivity(i)
-    }
 
-    private fun goManualActivity() {
-        val i = Intent(activity, Dummy1Activity::class.java)
-        startActivity(i)
-    }
 }

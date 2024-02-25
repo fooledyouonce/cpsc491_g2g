@@ -95,7 +95,7 @@
         android:textColor="@color/white" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivLogo"
         android:layout_width="368dp"
         android:layout_height="602dp"
         android:layout_alignStart="@+id/etUsername"

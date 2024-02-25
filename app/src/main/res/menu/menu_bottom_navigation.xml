@@ -6,24 +6,24 @@
     <item
         android:id="@+id/action_home"
         android:enabled="true"
-        android:icon="@drawable/outline_home_24"
+        android:icon="@drawable/toilet_side"
+        android:title="@string/home"
         android:visible="true"
         app:showAsAction="always"
-        android:title="@string/home"
         tools:ignore="AlwaysShowAction" />
     <item
-        android:id="@+id/action_wiki"
+        android:id="@+id/action_map"
         android:enabled="true"
-        android:icon="@drawable/outline_info_24"
+        android:icon="@drawable/search_glass_unselected"
+        android:title="@string/map"
         android:visible="true"
-        app:showAsAction="always"
-        android:title="@string/wiki" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
-        android:icon="@drawable/outline_person_outline_24"
+        android:icon="@drawable/profile_outline"
+        android:title="@string/profile"
         android:visible="true"
-        app:showAsAction="always"
-        android:title="@string/profile" />
+        app:showAsAction="always" />
 
 </menu>

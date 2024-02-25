@@ -1,17 +1,15 @@
 package com.example.got2go.activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
-import androidx.core.app.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.got2go.R
 import com.example.got2go.fragments.HomeFragment
-import com.example.got2go.fragments.WikiFragment
+import com.example.got2go.fragments.MapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -30,9 +28,9 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.action_wiki -> {
+                R.id.action_map -> {
                     supportFragmentManager.beginTransaction()
-                            .replace(R.id.flContainer, WikiFragment()).commit()
+                            .replace(R.id.flContainer, MapFragment()).commit()
                     true
                 }
 

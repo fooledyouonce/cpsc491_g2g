@@ -35,8 +35,8 @@
         android:layout_toStartOf="@+id/btnMetal"
         android:adjustViewBounds="true"
         android:background="@null"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/paper" />
+        android:scaleType="fitCenter" />
+<!--        app:srcCompat="@drawable/paper" />-->
 
     <ImageButton
         android:id="@+id/btnPlastic"
@@ -49,8 +49,8 @@
         android:layout_marginBottom="170dp"
         android:adjustViewBounds="true"
         android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/waterbottle" />
+        android:scaleType="centerInside" />
+<!--        app:srcCompat="@drawable/waterbottle" />-->
 
     <ImageButton
         android:id="@+id/btnMetal"
@@ -62,10 +62,11 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="425dp"
-        android:background="@drawable/soda_can"
         android:cropToPadding="false"
         android:scaleX="1"
         android:scaleY="1" />
+<!--        android:background="@drawable/soda_can"-->
+
 
     <ImageButton
         android:id="@+id/btnGlass"
@@ -76,7 +77,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="200dp"
-        android:layout_toStartOf="@+id/btnPlastic"
-        android:background="@drawable/wine_bottles" />
+        android:layout_toStartOf="@+id/btnPlastic" />
+<!--        android:background="@drawable/wine_bottles" />-->
 
 </RelativeLayout>
