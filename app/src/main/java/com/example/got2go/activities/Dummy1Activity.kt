@@ -1,143 +1,94 @@
-package com.example.got2go.activities;
+package com.example.got2go.activities
 
-import static android.widget.Toast.LENGTH_SHORT;
+import android.content.Intent
+import android.os.Bundle
+import android.text.TextUtils
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.got2go.R
+import com.example.got2go.fragments.HomeFragment
+import com.example.got2go.fragments.WikiFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import com.example.got2go.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
-
-import com.example.got2go.fragments.HomeFragment;
-import com.example.got2go.fragments.ProfileFragment;
-import com.example.got2go.fragments.WikiFragment;
-import com.parse.SaveCallback;
-
-public class Dummy1Activity extends AppCompatActivity {
+class Dummy1Activity : AppCompatActivity() {
     //TODO: update activity w/g2g stuff
-    private BottomNavigationView bottomNavigationView;
 
-    EditText etItemName;
-    EditText etItemType;
-    Button btnCheck;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manual);
-
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
-        etItemName = findViewById(R.id.etItemName);
-        etItemType = findViewById(R.id.etItemType);
-        btnCheck = findViewById(R.id.btnCheck);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = null;
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.flContainer, new HomeFragment()).commit();
-                        finish();
-                        return true;
-                    case R.id.action_wiki:
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.flContainer, new WikiFragment()).commit();
-                        finish();
-                        return true;
-                    case R.id.action_profile:
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.flContainer, new ProfileFragment(ParseUser.getCurrentUser())).commit();
-                        finish();
-                        return true;
-                    default:
-                        return false;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_manual)
+        val actionBar: ActionBar? = supportActionBar
+        var bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigation)
+        var etItemName: EditText = findViewById(R.id.etItemName)
+        var etItemType: EditText = findViewById(R.id.etItemType)
+        var btnCheck: Button = findViewById(R.id.btnCheck)
+        bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            val fragment: Fragment? = null
+            when (item.itemId) {
+                R.id.action_home -> {
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.flContainer, HomeFragment()).commit()
+                    finish()
+                    true
                 }
+
+                R.id.action_wiki -> {
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.flContainer, WikiFragment()).commit()
+                    finish()
+                    true
+                }
+
+                else -> false
             }
-        });
+        })
+        val itemName = etItemName.text.toString()
+        val itemType = etItemType.text.toString()
+        btnCheck.setOnClickListener(View.OnClickListener {
+            //TODO: fix &&
+            if (TextUtils.isEmpty(etItemName.text.toString()) && TextUtils.isEmpty(etItemType.getText().toString())) {
+                Toast.makeText(this@Dummy1Activity, "Please fill out all fields!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@Dummy1Activity, "Checking!", Toast.LENGTH_SHORT).show()
 
-        String itemName = etItemName.getText().toString();
-        String itemType = etItemType.getText().toString();
-        btnCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                //TODO: fix &&
-                if(TextUtils.isEmpty(etItemName.getText().toString()) && TextUtils.isEmpty(etItemType.getText().toString())) {
-                    Toast.makeText(Dummy1Activity.this, "Please fill out all fields!", LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(Dummy1Activity.this, "Checking!", LENGTH_SHORT).show();
-
-                    //TODO: DB checking here
-                    // Configure Query
-                    ParseObject userManualForm = new ParseObject("UserManualForm");
-                    // Store an object
-                    userManualForm.put("itemName", etItemName.getText().toString());
-                    userManualForm.put("itemType", etItemType.getText().toString());
-
-                    // Saving object
-                    userManualForm.saveInBackground(new SaveCallback() {
-                        @Override
-                        public void done(ParseException e) {
-                            if (e == null) {
-                                // Success
-                            } else {
-                                // Error
-                            }
-                        }
-                    });
-                    //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
-                    goResultActivity();
-                }
+                //TODO: DB checking here
+                // Configure Query
+                // Store an object
+                //TODO: upon success navigate to results, upon error indicate no match/can't be recycled
+                goResultActivity()
             }
-        });
+        })
     }
 
-    private void goResultActivity() {
-        Intent i = new Intent(this, Dummy2Activity.class);
-        startActivity(i);
-        finish();
+    private fun goResultActivity() {
+        val i = Intent(this, Dummy2Activity::class.java)
+        startActivity(i)
+        finish()
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.logout, menu);
-        return true;
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.logout, menu)
+        return true
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.Logout) {
-            ParseUser.logOut();
-            ParseUser currentUser = ParseUser.getCurrentUser();
-            goLoginActivity();
-            return true;
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.Logout) {
+            goLoginActivity()
+            return true
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item)
     }
-    private void goLoginActivity() {
-        Intent i = new Intent(this, LoginActivity.class);
-        startActivity(i);
-        finish();
+
+    private fun goLoginActivity() {
+        val i = Intent(this, LoginActivity::class.java)
+        startActivity(i)
+        finish()
     }
 }
-

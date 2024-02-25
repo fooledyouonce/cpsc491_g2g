@@ -10,8 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
     }
 }
+
 rootProject.name = "Got2Go"
-include ':app'
+include(":app")
