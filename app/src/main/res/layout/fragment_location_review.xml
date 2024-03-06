@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <ImageView
+        android:layout_width="234dp"
+        android:layout_height="234dp"
+        android:id="@+id/g2gLogo3"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/g2gw" />
+
+    <TextView
+        android:id="@+id/tvWrittenReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="28dp"
+        android:fontFamily="@font/poppins_medium"
+        tools:text="Location - Written Reviews"
+        android:layout_below="@+id/g2gLogo3"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-30dp"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_alignStart="@id/tvWrittenReviews"
+        android:layout_below="@id/tvWrittenReviews"
+        android:layout_marginEnd="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/line3"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/edit_text_border"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_outline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/edit_text_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5sp"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/reviewTextView"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="5sp"
+                android:text="Written review"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_border"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingEnd="10dp"
+                    android:text="Category"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/star1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/star_rating_gray" />
+
+                <ImageView
+                    android:id="@+id/star2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/star_rating_gray" />
+
+                <ImageView
+                    android:id="@+id/star3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/star_rating_gray" />
+
+                <ImageView
+                    android:id="@+id/star4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/star_rating_gray" />
+
+                <ImageView
+                    android:id="@+id/star5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/star_rating_gray" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

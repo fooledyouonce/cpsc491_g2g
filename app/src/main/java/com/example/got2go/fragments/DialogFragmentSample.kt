@@ -12,7 +12,7 @@ class DialogFragmentSample  //TODO: update fragment w/g2g stuff
     : DialogFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_sample, container)
+        return inflater.inflate(R.layout.fragment_bookmark, container)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

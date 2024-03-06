@@ -10,7 +10,7 @@
     <string name="login">LOGIN</string>
     <string name="username">username</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="hf_filler">Write a Review for Location</string>
+    <string name="hf_filler">Write a Review on Location</string>
     <string name="scan_item">Submit</string>
     <string name="input_manually">MANUAL INPUT</string>
     <string name="check">CHECK</string>
@@ -26,6 +26,8 @@
     <string name="waste_categories">Waste Categories</string>
     <string name="prompt">Take a picture of the material you wish to recycle.</string>
     <string name="map">Map</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="review">Review</string>
 
 
 </resources>
