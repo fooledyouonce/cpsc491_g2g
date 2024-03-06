@@ -4,6 +4,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/action_map"
+        android:enabled="true"
+        android:icon="@drawable/search_glass_unselected"
+        android:title="@string/map"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_review"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/review"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_home"
         android:enabled="true"
         android:icon="@drawable/toilet_side"
@@ -12,12 +26,13 @@
         app:showAsAction="always"
         tools:ignore="AlwaysShowAction" />
     <item
-        android:id="@+id/action_map"
+        android:id="@+id/action_bookmark"
         android:enabled="true"
-        android:icon="@drawable/search_glass_unselected"
-        android:title="@string/map"
+        android:icon="@drawable/bookmark_unselected"
+        android:title="@string/bookmark"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
@@ -25,5 +40,6 @@
         android:title="@string/profile"
         android:visible="true"
         app:showAsAction="always" />
+
 
 </menu>

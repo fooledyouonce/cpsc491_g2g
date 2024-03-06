@@ -6,21 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <EditText
-        android:id="@+id/welcome"
-        android:layout_width="368dp"
-        android:layout_height="602dp"
-
-        android:layout_alignStart="@+id/etUsername"
-        android:layout_alignEnd="@+id/etPassword"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="-60dp"
-        android:layout_marginEnd="15dp"
-
-        android:inputType="text"
-        android:text="Welcome to Got2Go!" />
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
@@ -29,7 +14,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="81dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="@color/Pink"
         android:fontFamily="@font/poppins_medium"
@@ -42,17 +27,19 @@
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppins_extralight"
         android:hint="@string/username"
         android:inputType="textPersonName"
+        android:paddingStart="5sp"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -63,17 +50,19 @@
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@+id/etUsername"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/edit_text_border"
         android:ems="10"
         android:fontFamily="@font/poppins_extralight"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:paddingStart="5sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -85,8 +74,8 @@
         android:layout_below="@+id/etPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="50dp"
         android:accessibilityLiveRegion="none"
         android:backgroundTint="@color/Pink"
@@ -96,14 +85,65 @@
 
     <ImageView
         android:id="@+id/ivLogo"
-        android:layout_width="368dp"
-        android:layout_height="602dp"
+        android:layout_width="207dp"
+        android:layout_height="234dp"
         android:layout_alignStart="@+id/etUsername"
         android:layout_alignEnd="@+id/etUsername"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="-130dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="-28dp"
+        android:layout_marginEnd="95dp"
         app:srcCompat="@drawable/g2gw" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/etUsername"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="195dp"
+        android:layout_marginRight="190dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Log In"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        tools:layout_marginEnd="190dp" />
+
+    <View
+        android:layout_width="390dp"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/login"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btnSso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/Pink"
+        android:text="Sign in with Google"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-75dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome to Got2Go!"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
 
 </RelativeLayout>

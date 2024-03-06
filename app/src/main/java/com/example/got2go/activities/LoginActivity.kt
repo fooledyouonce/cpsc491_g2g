@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.got2go.R
@@ -19,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
         var etPassword: EditText = findViewById(R.id.etPassword)
         var btnLogin: Button = findViewById(R.id.btnLogin)
         var btnSignUp: Button = findViewById(R.id.btnSignUp)
+
         btnLogin.setOnClickListener(View.OnClickListener {
             Log.i(TAG, "Login button tapped")
             val username = etUsername.text.toString()

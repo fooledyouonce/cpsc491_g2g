@@ -1,83 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ptCategoties"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvWasteCat"
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="373dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_border"
+        android:hint=" Search Location"
+        android:inputType="text" />
+
+
+    <Spinner
+        android:id="@+id/filterSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/searchBar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/Pink" />
+
+
+    <Button
+        android:id="@+id/sortButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/waste_categories"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+        android:text="Sort"
+        android:layout_alignEnd="@id/searchBar"
+        android:layout_alignBottom="@id/filterSpinner"
+        android:fontFamily="@font/poppins_medium"/>
 
-    <ImageButton
-        android:id="@+id/btnPaper"
-        android:layout_width="108dp"
-        android:layout_height="125dp"
-        android:layout_above="@+id/btnGlass"
-        android:layout_below="@+id/tvWasteCat"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        android:layout_toStartOf="@+id/btnMetal"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:scaleType="fitCenter" />
-<!--        app:srcCompat="@drawable/paper" />-->
 
-    <ImageButton
-        android:id="@+id/btnPlastic"
-        android:layout_width="142dp"
-        android:layout_height="162dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="365dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="170dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerInside" />
-<!--        app:srcCompat="@drawable/waterbottle" />-->
 
-    <ImageButton
-        android:id="@+id/btnMetal"
-        android:layout_width="117dp"
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvWasteCat"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="425dp"
-        android:cropToPadding="false"
-        android:scaleX="1"
-        android:scaleY="1" />
-<!--        android:background="@drawable/soda_can"-->
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
 
+    <Button
+        android:id="@+id/zoomInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom In"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@id/sortButton"
+        android:layout_marginStart="16dp" />
 
-    <ImageButton
-        android:id="@+id/btnGlass"
-        android:layout_width="126dp"
-        android:layout_height="113dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="200dp"
-        android:layout_toStartOf="@+id/btnPlastic" />
-<!--        android:background="@drawable/wine_bottles" />-->
+    <Button
+        android:id="@+id/zoomOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom Out"
+        android:layout_below="@id/zoomInButton"
+        android:layout_alignStart="@id/zoomInButton"
+        android:layout_marginTop="8dp" />
 
 </RelativeLayout>
