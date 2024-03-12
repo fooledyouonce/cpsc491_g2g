@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.got2go.R
+import com.example.got2go.fragments.SignUpDialogFragment
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,14 @@ class LoginActivity : AppCompatActivity() {
             val username = etUsername.text.toString()
             val password = etPassword.text.toString()
         })
+
+        btnSignUp.setOnClickListener {
+            Log.i(TAG, "Sign-up button tapped")
+            //login fragment
+            val signUpDialogFragment = SignUpDialogFragment()
+            signUpDialogFragment.show(supportFragmentManager, SignUpDialogFragment.TAG)
+        }
+
     }
 
     private fun goMainActivity() {
