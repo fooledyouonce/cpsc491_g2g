@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="false">
+
+    <ImageView
+        android:id="@+id/g2gLogo2"
+        android:layout_width="234dp"
+        android:layout_height="234dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/g2gw" />
+
+    <TextView
+        android:id="@+id/tvPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/g2gLogo2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Preferences"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvPreferences"
+        android:layout_alignStart="@id/tvPreferences"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_border"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_wheelchair_accessible"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Wheelchair Accessible"
+            android:drawableStart="@drawable/wheelchair_grey"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_inclusive_stall"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Inclusive Stall"
+            android:drawableStart="@drawable/inclusive_sign"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <CheckBox
+            android:id="@+id/checkbox_no_passcode"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/unlocked"
+            android:text="No Passcode"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/checkbox_hygiene"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/pad"
+            android:text="Hygiene Products"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/checkbox_baby_station"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/baby"
+            android:text="Baby Changing Station"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/checkbox_urinal"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/urinal"
+            android:text="Urinal"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/checkbox_single_stall"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/single_stall_toilet"
+            android:text="Single Stall Toilet"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/checkbox_family_restroom"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/family"
+            android:text="Family Restroom"
+            android:fontFamily="@font/poppins_medium" />
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/line2"
+        android:layout_alignStart="@id/etPassword"
+        android:layout_alignEnd="@id/etPassword"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins_extralight"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:paddingStart="5sp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/etUsername"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins_extralight"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/etPasswordConf"
+        android:layout_below="@id/etPassword"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins_extralight"
+        android:hint="confirm password"
+        android:inputType="textPassword"
+        android:paddingStart="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="207dp"
+        android:layout_height="234dp"
+        android:layout_alignStart="@+id/etUsername"
+        android:layout_alignEnd="@+id/etUsername"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="-28dp"
+        android:layout_marginEnd="95dp"
+        app:srcCompat="@drawable/g2gw" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign Up"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvLogin"
+        android:layout_alignStart="@id/tvLogin"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-75dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Welcome to Got2Go!"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPasswordConf"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:backgroundTint="@color/Pink"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/create_account"
+            android:textColor="@color/white" />
+
+</RelativeLayout>

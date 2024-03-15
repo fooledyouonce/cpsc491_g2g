@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.got2go.R
+import com.example.got2go.fragments.SignUpDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -37,10 +38,17 @@ class LoginActivity : AppCompatActivity() {
         })
 
         btnRedirectSignUp.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-            finish()
+            Log.i(TAG, "Sign-up button tapped")
+            //login fragment
+            val signUpDialogFragment = SignUpDialogFragment()
+            signUpDialogFragment.show(supportFragmentManager, SignUpDialogFragment.TAG)
         }
+
+
+//        btnRedirectSignUp.setOnClickListener {
+//            val intent = Intent(this, RegisterActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 
     private fun login() {
