@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etEmailAddress"
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="49dp"
@@ -26,7 +26,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="49dp"
-        android:layout_below="@+id/etUsername"
+        android:layout_below="@+id/etEmailAddress"
         android:layout_marginTop="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
@@ -39,13 +39,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/etConfPassword"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:fontFamily="@font/poppins_extralight"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:paddingStart="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="207dp"
         android:layout_height="234dp"
-        android:layout_alignStart="@+id/etUsername"
-        android:layout_alignEnd="@+id/etUsername"
+        android:layout_alignStart="@+id/etEmailAddress"
+        android:layout_alignEnd="@+id/etEmailAddress"
         android:layout_alignParentTop="true"
         android:layout_marginStart="95dp"
         android:layout_marginTop="-28dp"
@@ -60,7 +77,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="-30dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Login"
+        android:text="Sign Up"
         android:textColor="#000000"
         android:textSize="28sp" />
 
@@ -99,7 +116,7 @@
 
 
         <Button
-            android:id="@+id/btnRedirectSignUp"
+            android:id="@+id/btnSigned"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -109,7 +126,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRedirectLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
