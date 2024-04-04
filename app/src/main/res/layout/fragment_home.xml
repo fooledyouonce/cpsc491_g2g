@@ -1,255 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible">
+    android:background="@color/white">
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="390dp"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="212dp"
-        android:background="@android:color/darker_gray" />
-
-    <ImageView
-        android:id="@+id/g2gLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="234dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="-6dp"
-        android:layout_marginEnd="91dp"
-        app:srcCompat="@drawable/g2gw" />
-
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/g2gLogo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-20dp"
-        android:layout_marginTop="-53dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="75dp"
-        android:fontFamily="@font/poppins_medium"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        tools:text="@string/hf_filler" />
-
-    <Button
-        android:id="@+id/btnScan"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="648dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="-326dp"
-        android:backgroundTint="@color/Pink"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/scan_item"
-        android:textColor="@color/white" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/overallRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="232dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Overall"
-        android:textColor="#000000"
-        android:textSize="20dp" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/overallRating"
-        android:layout_marginLeft="10dp"
-        android:layout_toEndOf="@id/overallRating"
-        android:orientation="horizontal">
+        <View
+            android:id="@+id/line"
+            android:layout_width="390dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvWelcome"
+            android:layout_marginTop="-8dp"
+            android:background="@android:color/darker_gray" />
 
         <ImageView
-            android:id="@+id/star1"
+            android:id="@+id/g2gLogo"
+            android:contentDescription="Got2Go logo"
+            android:layout_width="wrap_content"
+            android:layout_height="234dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="91dp"
+            app:srcCompat="@drawable/g2gw" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/star_rating_gray" />
+            android:layout_below="@id/g2gLogo"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-50dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            tools:text="@string/hf_filler" />
 
-        <ImageView
-            android:id="@+id/star2"
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/quantityEditText"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/Pink"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/scan_item"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/overallRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/star_rating_gray" />
+            android:layout_alignStart="@id/tvWelcome"
+            android:layout_below="@id/line"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="15dp"
+            android:text="Overall"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/star3"
+        <RatingBar
+            android:id="@+id/overallRatingBar"
             android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/overallRating"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@id/overallRating"
+            android:rating="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="1"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/selectStarRating"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/star_rating_gray" />
+            android:layout_below="@id/line"
+            android:layout_alignEnd="@id/addMore"
+            android:fontFamily="@font/poppins_medium"
+            android:text="select star to adjust rating" />
 
-        <ImageView
-            android:id="@+id/star4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/star_rating_gray" />
-
-        <ImageView
-            android:id="@+id/star5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/star_rating_gray" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/selectStarRating"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="267dp"
-        android:layout_marginTop="219dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="select star to adjust rating" />
-
-    <ImageView
-        android:id="@+id/addMore"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_below="@id/overallRating"
-        android:layout_alignStart="@id/overallRating"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/add_more_plus" />
-
-    <TextView
-        android:id="@+id/addMoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addMore"
-        android:layout_alignStart="@id/addMore"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="-25dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="add more"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/optional"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/reviewTextbox"
-        android:layout_alignStart="@id/reviewTextbox"
-        android:layout_alignTop="@id/reviewTextbox"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="optional: number and types of stall"
-        android:textSize="16sp" />
-
-    <ImageView
-        android:id="@+id/wheelchair_access"
-        android:layout_width="51dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/optional"
-        android:layout_alignStart="@id/optional"
-        android:layout_marginStart="-8dp"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/wheelchair_icon" />
-
-    <EditText
-        android:id="@+id/quantityEditText"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignTop="@id/wheelchair_access"
-        android:layout_toEndOf="@id/wheelchair_access"
-        android:hint="0"
-        android:inputType="number"
-        android:textAlignment="center" />
-
-    <EditText
-        android:id="@+id/reviewTextbox"
-        android:layout_width="358dp"
-        android:layout_height="149dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="331dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="Start review here"
-        android:inputType="text"
-        android:padding="5dp"
-        android:textAlignment="inherit"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:textStyle="italic" />
-
-    <ImageView
-        android:id="@+id/toilet"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:layout_below="@id/optional"
-        android:layout_toEndOf="@id/quantityEditText"
-        android:src="@drawable/toilet_side" />
-
-    <EditText
-        android:id="@+id/quantityEditText2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignTop="@id/toilet"
-        android:layout_toEndOf="@id/toilet"
-        android:hint="0"
-        android:inputType="number"
-        android:textAlignment="center" />
-
-    <ImageView
-        android:id="@+id/urinal"
-        android:layout_width="54dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@id/quantityEditText2"
-        android:layout_toEndOf="@id/quantityEditText2"
-        android:src="@drawable/urinal" />
-
-    <EditText
-        android:id="@+id/quantityEditText3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignTop="@id/urinal"
-        android:layout_toEndOf="@id/urinal"
-        android:hint="0"
-        android:textAlignment="center"
-        android:inputType="number"
-        />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_toEndOf="@id/quantityEditText3"
-        android:layout_alignTop="@id/quantityEditText3">
-
-        <ImageView
-            android:id="@+id/pad"
-            android:layout_width="49dp"
-            android:layout_height="48dp"
-            android:src="@drawable/pad"/>
-        <CheckBox android:id="@+id/checkbox"
+        <Button
+            android:id="@+id/addMore"
             android:layout_width="48dp"
-            android:layout_height="48dp" />
-    </LinearLayout>
+            android:layout_height="65dp"
+            android:layout_below="@id/selectStarRating"
+            android:background="@drawable/add_more_plus"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Button to add more rating categories"
+            android:textColor="@color/black"
+            android:drawablePadding="50dp"
+            />
 
-</RelativeLayout>
+
+        <TextView
+            android:id="@+id/optional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reviewTextbox"
+            android:layout_alignStart="@id/reviewTextbox"
+            android:layout_alignTop="@id/reviewTextbox"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="optional: number and types of stall"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/wheelchair_access"
+            android:contentDescription="Handicap/Wheelchair icon"
+            android:layout_width="51dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/optional"
+            android:layout_alignStart="@id/reviewTextbox"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/wheelchair_icon" />
+
+        <EditText
+            android:id="@+id/quantityEditText"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@id/wheelchair_access"
+            android:layout_toEndOf="@id/wheelchair_access"
+            android:hint="0"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/reviewTextbox"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:layout_below="@id/addMore"
+            android:layout_alignStart="@id/overallRating"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="Start review here"
+            android:inputType="text"
+            android:textAlignment="inherit"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/toilet"
+            android:contentDescription="Toilet icon"
+            android:layout_width="47dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/optional"
+            android:layout_toEndOf="@id/quantityEditText"
+            android:src="@drawable/toilet_side" />
+
+        <EditText
+            android:id="@+id/quantityEditText2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@id/toilet"
+            android:layout_toEndOf="@id/toilet"
+            android:hint="0"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/urinal"
+            android:contentDescription="Urinal icon"
+            android:layout_width="54dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/quantityEditText2"
+            android:layout_toEndOf="@id/quantityEditText2"
+            android:src="@drawable/urinal" />
+
+        <EditText
+            android:id="@+id/quantityEditText3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@id/urinal"
+            android:layout_toEndOf="@id/urinal"
+            android:hint="0"
+            android:textAlignment="center"
+            android:inputType="number"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/quantityEditText3"
+            android:layout_alignTop="@id/quantityEditText3">
+
+            <ImageView
+                android:id="@+id/pad"
+                android:layout_width="49dp"
+                android:layout_height="48dp"
+                android:contentDescription="Hygiene Products icon"
+                android:src="@drawable/pad"/>
+
+            <CheckBox android:id="@+id/checkbox"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            android:layout_above="@id/reviewTextbox"
+            android:layout_below="@id/overallRating"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="-68dp"
+            android:contentDescription="Scrolling area for different categories">
+
+            <LinearLayout
+                android:id="@+id/categoryContainer"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical" />
+        </ScrollView>
+    </RelativeLayout>
+</ScrollView>

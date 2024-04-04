@@ -9,6 +9,7 @@
         android:layout_height="234dp"
         android:id="@+id/g2gLogo3"
         android:layout_centerHorizontal="true"
+        android:contentDescription="Got2Go Logo"
         android:src="@drawable/g2gw" />
 
     <TextView
@@ -16,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="28dp"
+        android:textSize="28sp"
         android:fontFamily="@font/poppins_medium"
         tools:text="Location - Written Reviews"
         android:layout_below="@+id/g2gLogo3"
@@ -48,6 +49,7 @@
             android:id="@+id/profileImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:contentDescription="User's profile icon"
             android:src="@drawable/profile_outline" />
 
         <LinearLayout
@@ -97,46 +99,23 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="6dp"
                     android:fontFamily="@font/poppins_medium"
                     android:paddingEnd="10dp"
                     android:text="Category"
                     android:textColor="@color/black" />
 
-                <ImageView
-                    android:id="@+id/star1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/star_rating_gray" />
-
-                <ImageView
-                    android:id="@+id/star2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/star_rating_gray" />
-
-                <ImageView
-                    android:id="@+id/star3"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/star_rating_gray" />
-
-                <ImageView
-                    android:id="@+id/star4"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/star_rating_gray" />
-
-                <ImageView
-                    android:id="@+id/star5"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/star_rating_gray" />
+                <RatingBar
+                    android:id="@+id/overallRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginStart="-30dp"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1"
+                    android:visibility="visible" />
 
             </LinearLayout>
         </LinearLayout>

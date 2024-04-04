@@ -1,0 +1,297 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Location" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:layout_marginStart="200dp"
+                android:id="@+id/bookmarkBtn"
+                android:src="@drawable/bookmark_selected"
+                android:contentDescription="Button to Bookmark the location"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"/>
+
+        <!-- Location Ratings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp">
+
+            <!-- Overall Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="-20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overall"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-17dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+                <RatingBar
+                    android:id="@+id/overallRatingBarPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <!-- Accessibility Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="-20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accessibility"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-17dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RatingBar
+                    android:id="@+id/accessibilityRatingBarPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <!-- Cleanliness Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="-20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cleanliness"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-17dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cleanlinessRatingBarPopup"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <!-- Location Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="-20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-17dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locationRatingBarPopup"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <!-- Stalls Rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stalls"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stallsRatingBarPopup"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/wheelchair_access"
+                android:contentDescription="Handicap/Wheelchair icon"
+                android:layout_width="51dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/wheelchair_icon" />
+            <TextView
+                android:id="@+id/accessibilityCountPopupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_border"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="8dp"/>
+            <ImageView
+                android:id="@+id/toilet"
+                android:contentDescription="Toilet icon"
+                android:layout_width="47dp"
+                android:layout_height="45dp"
+                android:src="@drawable/toilet_side" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toiletCountPopupTv"
+                android:background="@drawable/edit_text_border"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="8dp"/>
+            <ImageView
+                android:id="@+id/urinal"
+                android:contentDescription="Urinal icon"
+                android:layout_width="54dp"
+                android:layout_height="50dp"
+                android:src="@drawable/urinal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/urinalCountPopupTv"
+                android:background="@drawable/edit_text_border"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="8dp"/>
+            <ImageView
+                android:id="@+id/pad"
+                android:layout_width="49dp"
+                android:layout_height="48dp"
+                android:contentDescription="Hygiene Products icon"
+                android:src="@drawable/pad"/>
+            <ImageView
+                android:id="@+id/amenityStatusImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/checkbox_outline_blank"
+                android:contentDescription="Hygiene Products Status"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewWrittenBtn"
+            android:text="View Written Reviews"
+            android:backgroundTint="@color/Pink"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</RelativeLayout>

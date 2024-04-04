@@ -14,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="88dp"
         android:layout_marginTop="3dp"
+        android:contentDescription="Got2Go Logo"
         android:src="@drawable/g2gw" />
 
     <TextView
@@ -54,6 +55,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="0dp"
             android:paddingEnd="20dp"
+            android:contentDescription="Bookmark icon"
             android:src="@drawable/bookmark_selected" />
 
         <TextView
@@ -64,7 +66,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Location"
             android:textColor="@color/black"
-            android:textSize="22dp" />
+            android:textSize="22sp" />
 
 
         <ImageView
@@ -73,6 +75,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="130dp"
             android:layout_marginTop="0dp"
+            android:contentDescription="Details button"
             android:src="@drawable/more_details" />
 
     </LinearLayout>
