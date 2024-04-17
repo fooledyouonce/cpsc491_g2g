@@ -1,36 +1,70 @@
-package com.example.got2go.fragments
+package com.example.got2go.activities
 
-import android.app.Dialog
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.DialogFragment
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.got2go.R
-import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class SignUpDialogFragment : DialogFragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_signup, container, false)
-        val btnSignUp = view.findViewById<Button>(R.id.btnSignUp)
+class SignUpDialogFragment : AppCompatActivity() {
+
+    lateinit var etUsername: EditText
+    lateinit var etEmail: EditText
+    lateinit var etConfPass: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var btnSignUp: Button
+    lateinit var btnRedirectLogin: Button
+
+    private lateinit var auth : FirebaseAuth
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_signup)
+
+        // etUsername = findViewById(R.id.etUsername)
+        etEmail = findViewById(R.id.etEmailAddress)
+        etPassword = findViewById(R.id.etPassword)
+        etConfPass = findViewById(R.id.etConfPassword)
+        btnSignUp = findViewById(R.id.btnSigned)
+
+        auth = Firebase.auth
+
 
         btnSignUp.setOnClickListener {
-            Log.i(TAG, "Sign-up button tapped")
-            //add sign-up logic here
+            signUpUser()
         }
 
-        return view
     }
 
-    companion object {
-        const val TAG = "SignUpDialogFragment"
+    private fun signUpUser() {
+        // var username = etUsername.text.toString()
+        val email = etEmail.text.toString()
+        val pass = etPassword.text.toString()
+        val confirmPassword = etConfPass.text.toString()
+
+        if (email.isBlank() || pass.isBlank() || confirmPassword.isBlank()) {
+            Toast.makeText(this, "It can't be blank", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        if (pass != confirmPassword) {
+            Toast.makeText(this, "Password does not match", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
+            if (it.isSuccessful) {
+                Toast.makeText(this, "Successfully Signed Up", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Signed Up Failed", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
-        val dialog = super.onCreateDialog(savedInstanceState)
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        return dialog
-    }
 }

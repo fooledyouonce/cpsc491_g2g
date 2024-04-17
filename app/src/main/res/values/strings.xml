@@ -32,6 +32,6 @@
     <string name="review">Review</string>
     <string name="create_account">Create Account</string>
     <string name="already_have_an_account_login">Login Page</string>
-
+    <string name="default_web_client_id">403177540717-ojloptcv8tetsbp12gjp84r013ol9tq4.apps.googleusercontent.com</string>
 
 </resources>

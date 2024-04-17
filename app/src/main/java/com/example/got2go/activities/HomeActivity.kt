@@ -11,14 +11,12 @@ import com.example.got2go.R
 import com.example.got2go.fragments.HomeFragment
 import com.example.got2go.fragments.MapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.widget.EditText
 
 
 
 
 class HomeActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         val actionBar: ActionBar? = supportActionBar
@@ -42,7 +40,6 @@ class HomeActivity : AppCompatActivity() {
             }
         })
         bottomNavigationView.selectedItemId = R.id.action_home
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
