@@ -46,7 +46,11 @@ class LoginActivity : AppCompatActivity() {
             Log.i(TAG, "Login button tapped")
             val username = etUsername.text.toString()
             val password = etPassword.text.toString()
-
+            if (username.isBlank() || password.isBlank()) {
+                Toast.makeText(this, "Username and password are required", Toast.LENGTH_SHORT).show()
+                return@OnClickListener
+            }
+            login()
         })
 
 //        btnRedirectSignUp.setOnClickListener {
@@ -81,13 +85,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun moveNext() {
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        if(currentUser != null) {
-            startActivity(Intent(this, HomeActivity::class.java))
-            this.finish()
-        }
-    }
+//    private fun moveNext() {
+//        val currentUser = FirebaseAuth.getInstance().currentUser
+//        if(currentUser != null) {
+//            startActivity(Intent(this, HomeActivity::class.java))
+//            this.finish()
+//        }
+//    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -134,6 +138,7 @@ class LoginActivity : AppCompatActivity() {
         val pass = etPassword.text.toString()
         auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
+                goMainActivity()
                 Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_SHORT).show()
             } else
                 Toast.makeText(this, "Log In failed ", Toast.LENGTH_SHORT).show()
@@ -141,9 +146,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goMainActivity() {
-        val i = Intent(this, HomeActivity::class.java)
-        startActivity(i)
-        finish() //makes main activity the "default" page, closes login activity for access
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if(currentUser != null) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            this.finish() //makes main activity the "default" page, closes login activity for access
+        }
     }
 
 
