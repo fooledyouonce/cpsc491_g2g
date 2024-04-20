@@ -53,17 +53,17 @@ class LoginActivity : AppCompatActivity() {
             login()
         })
 
-//        btnRedirectSignUp.setOnClickListener {
-//            Log.i(TAG, "Sign-up button tapped")
-//            //login fragment
-//            val signUpDialogFragment = SignUpDialogFragment()
-//            signUpDialogFragment.show(supportFragmentManager, SignUpDialogFragment.TAG)
-//        }
-
         btnRedirectSignUp.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            Log.i(TAG, "Sign-up button tapped")
+            //login fragment
+            val signUpDialogFragment = SignUpDialogFragment()
+            signUpDialogFragment.show(supportFragmentManager, SignUpDialogFragment.TAG)
         }
+
+//        btnRedirectSignUp.setOnClickListener {
+//            val intent = Intent(this, RegisterActivity::class.java)
+//            startActivity(intent)
+//        }
 
         // google sso
         btnGoogleLogin = findViewById(R.id.btnGoogleLogin)
