@@ -10,6 +10,8 @@ import android.widget.ImageButton
 import androidx.fragment.app.DialogFragment
 import com.example.got2go.R
 import android.util.Log
+import androidx.navigation.fragment.findNavController
+
 
 class ToiletRatingInfoDialogFragment : DialogFragment() {
 
@@ -35,10 +37,9 @@ class ToiletRatingInfoDialogFragment : DialogFragment() {
             Log.d("ToiletRatingInfoDialogFragment", "Bookmark button clicked")
         }
 
-        //onClickListener for view written reviews button
+        // Inside ToiletRatingInfoDialogFragment
         viewWrittenBtn.setOnClickListener {
-            // Add view written reviews button functionality here
-            Log.d("ToiletRatingInfoDialogFragment", "View written reviews button clicked")
+            findNavController().navigate(R.id.action_to_location_reviews)
         }
 
         return view

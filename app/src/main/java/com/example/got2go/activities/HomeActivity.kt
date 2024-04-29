@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.got2go.R
 import com.example.got2go.fragments.HomeFragment
+import com.example.got2go.fragments.ProfileFragment
 import com.example.got2go.fragments.MapFragment
+import com.example.got2go.fragments.BookmarkFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.widget.EditText
 
 
 
@@ -26,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             val fragment: Fragment? = null
             when (item.itemId) {
-                R.id.action_home -> {
+                R.id.action_review -> {
                     supportFragmentManager.beginTransaction()
                             .replace(R.id.flContainer, HomeFragment()).commit()
                     true
@@ -35,6 +36,18 @@ class HomeActivity : AppCompatActivity() {
                 R.id.action_map -> {
                     supportFragmentManager.beginTransaction()
                             .replace(R.id.flContainer, MapFragment()).commit()
+                    true
+                }
+
+                R.id.action_profile -> {
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.flContainer, ProfileFragment()).commit()
+                    true
+                }
+
+                R.id.action_bookmark -> {
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.flContainer, BookmarkFragment()).commit()
                     true
                 }
 
