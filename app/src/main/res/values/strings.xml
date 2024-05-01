@@ -9,6 +9,7 @@
     <string name="back4app_client_key">6SaJhhC5X1OaKOu9EU9cXSnJGH9gxwp0mtTle5gl</string>
     <string name="login">LOGIN</string>
     <string name="username">username</string>
+    <string name="email">Email Address</string>
     <string name="sign_up">SIGN UP</string>
     <string name="hf_filler">Write a Review on Location</string>
     <string name="scan_item">Submit</string>
@@ -18,6 +19,7 @@
     <string name="item_name_i_e_water_bottle">material name (i.e water bottle)</string>
     <string name="what_item_is_made_of_i_e_plastic">what material is made of (i.e. plastic)</string>
     <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
     <string name="logout">Logout</string>
     <string name="home">Home</string>
     <string name="wiki">Wiki</string>
@@ -29,6 +31,7 @@
     <string name="bookmark">Bookmark</string>
     <string name="review">Review</string>
     <string name="create_account">Create Account</string>
-
+    <string name="already_have_an_account_login">Login Page</string>
+    <string name="default_web_client_id">403177540717-ojloptcv8tetsbp12gjp84r013ol9tq4.apps.googleusercontent.com</string>
 
 </resources>
